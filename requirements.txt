@@ -1,0 +1,5 @@
+certifi==2019.3.9
+Django==2.0.5
+PyMySQL==0.9.3
+pytz==2019.1
+wincertstore==0.2

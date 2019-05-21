@@ -1,0 +1,2 @@
+WARNING 2019-05-21 22:15:39,302 [Thread-4:6528] [django.request:93] [base:get_response] [WARNING]- Not Found: /robots.txt
+WARNING 2019-05-21 22:15:40,010 [Thread-8:12224] [django.request:93] [base:get_response] [WARNING]- Not Found: /favicon.ico
