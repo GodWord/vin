@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import sys
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
@@ -27,7 +28,6 @@ SECRET_KEY = 't6ol2gbt6l+z*5ng63btd3retq8vw+cc!buh22h5g^m=w+tp5y'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -71,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vin.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -88,7 +87,6 @@ DATABASES = {
         'PORT': '3306'
     },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -108,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -121,7 +118,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -152,16 +148,16 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/all.log',  # 日志输出文件
-            'maxBytes': 1024 * 1024 * 1024 * 5,  # 文件大小
-            'backupCount': 5,  # 备份份数
+            'maxBytes': 1024 * 1024 * 5,  # 文件大小
+            'backupCount': 10,  # 备份份数
             'formatter': 'standard',  # 使用哪种formatters日志格式
         },
         'all': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/all.log',  # 日志输出文件
-            'maxBytes': 1024 * 1024 * 1024 * 5,  # 文件大小
-            'backupCount': 5,  # 备份份数
+            'maxBytes': 1024 * 1024 * 5,  # 文件大小
+            'backupCount': 10,  # 备份份数
             'formatter': 'standard',  # 使用哪种formatters日志格式
         },
 
@@ -169,8 +165,8 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/error.log',
-            'maxBytes': 1024 * 1024 * 1024 * 5,
-            'backupCount': 5,
+            'maxBytes': 1024 * 1024 * 5,
+            'backupCount': 10,
             'formatter': 'standard',
         },
         'console': {
@@ -183,7 +179,7 @@ LOGGING = {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/script.log',
             'maxBytes': 1024 * 1024 * 1024 * 5,
-            'backupCount': 5,
+            'backupCount': 10,
             'formatter': 'standard',
         },
         'scprits_handler': {
@@ -191,7 +187,7 @@ LOGGING = {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/script.log',
             'maxBytes': 1024 * 1024 * 1024 * 5,
-            'backupCount': 5,
+            'backupCount': 10,
             'formatter': 'standard',
         }
     },
