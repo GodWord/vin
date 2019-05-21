@@ -1,0 +1,86 @@
+DEBUG 2019-05-21 22:15:37,780 [Dummy-1:10992] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+DEBUG 2019-05-21 22:15:37,782 [Dummy-1:10992] [django.db.backends:111] [utils:execute] [DEBUG]- (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-05-21 22:15:37,784 [Dummy-1:10992] [django.db.backends:111] [utils:execute] [DEBUG]- (0.002) SELECT VERSION(); args=None
+DEBUG 2019-05-21 22:15:37,832 [Dummy-1:10992] [django.db.backends:111] [utils:execute] [DEBUG]- (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+DEBUG 2019-05-21 22:15:37,867 [Dummy-1:10992] [django.db.backends:111] [utils:execute] [DEBUG]- (0.034) SHOW FULL TABLES; args=None
+INFO 2019-05-21 22:15:39,212 [Thread-2:15324] [django.server:124] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 16286
+INFO 2019-05-21 22:15:39,256 [Thread-3:11728] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+DEBUG 2019-05-21 22:15:39,297 [Thread-4:6528] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>]], 'path': 'robots.txt'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+WARNING 2019-05-21 22:15:39,304 [Thread-4:6528] [django.server:124] [basehttp:log_message] [WARNING]- "GET /robots.txt HTTP/1.1" 404 1966
+INFO 2019-05-21 22:15:39,623 [Thread-5:5272] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+INFO 2019-05-21 22:15:39,625 [Thread-6:16460] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+INFO 2019-05-21 22:15:39,625 [Thread-7:11624] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+DEBUG 2019-05-21 22:15:40,008 [Thread-8:12224] [django.template:878] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\vin\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+WARNING 2019-05-21 22:15:40,010 [Thread-8:12224] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 1969
